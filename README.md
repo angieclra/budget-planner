@@ -15,5 +15,6 @@ being organized, and I do think many people should be encouraged to use a budget
 ## User Stories 
 - As a user, I want to be able to add to the application the money spent
 - As a user, I want to be able to remove a certain amount of money from the budget planner
-- As a user, I want to be able to enter the amount of money spent to the budget planner
-- As a user, I want to be able to see the total of money spent 
+- As a user, I want to be able to see the amount of the money spent from the budget planner
+- As a user, I want to be able to see the total of entries/ spending in the budget planner
+- As a user, I want to be able to see invoice for the spending in the budget book
