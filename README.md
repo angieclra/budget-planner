@@ -1,4 +1,4 @@
-# Your Own Budget Book Planner:seedling:
+# Your Own Budget Book Planner :seedling:
 
 ## A budget planner application to make your day a lot more organized! :sparkles:
 
