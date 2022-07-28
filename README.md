@@ -18,3 +18,5 @@ being organized, and I do think many people should be encouraged to use a budget
 - As a user, I want to be able to see the amount of the money spent from the budget planner
 - As a user, I want to be able to see the total of entries of spending in the budget planner
 - As a user, I want to be able to see invoice for the spending in the budget book
+- As a user, I want to be able to save my budget book's spending to file
+- As a user, I want to be able to load my budget book's spending from file
