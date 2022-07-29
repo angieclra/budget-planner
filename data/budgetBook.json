@@ -1,18 +1,23 @@
 {
     "spending": [
         {
-            "entryCategory": "Essentials",
-            "entryName": "Iphone",
-            "entryMoneySpent": 1500
+            "moneySpent": 1500,
+            "name": "Iphone",
+            "category": "Essentials"
         },
         {
-            "entryCategory": "Gaming",
-            "entryName": "Nintendo",
-            "entryMoneySpent": 400
+            "moneySpent": 400,
+            "name": "Nintendo",
+            "category": "Gaming"
+        },
+        {
+            "moneySpent": 15,
+            "name": "Noodles",
+            "category": "Food"
         }
     ],
     "budgetBookName": "Angelique's Budget Book",
-    "invoice": "INVOICE\n_____________\nName: IPHONE\nCategory: ESSENTIALS\nMoney Spent: $1500.0\n--------------\nName: NINTENDO\nCategory: GAMING\nMoney Spent: $400.0\n--------------",
-    "budgetBookTotal": 1900,
-    "numberOfItemsBought": 2
+    "invoice": "INVOICE\n_____________\nName: IPHONE\nCategory: ESSENTIALS\nMoney Spent: $1500.0\n--------------\nName: NINTENDO\nCategory: GAMING\nMoney Spent: $400.0\n--------------\nName: NOODLES\nCategory: FOOD\nMoney Spent: $15.0\n--------------",
+    "budgetBookTotal": 1915,
+    "numberOfItemsBought": 3
 }

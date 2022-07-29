@@ -91,7 +91,7 @@ public class BudgetBookEntries implements Writable {
         json.put("budgetBookTotal", totalMoney);
         json.put("invoice", printInvoice());
         json.put("numberOfItemsBought", getNumEntries());
-        json.put("spending", getEntries());
+        json.put("spending", entriesToJson());
         return json;
     }
 
