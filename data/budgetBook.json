@@ -1,0 +1,18 @@
+{
+    "spending": [
+        {
+            "entryCategory": "Essentials",
+            "entryName": "Iphone",
+            "entryMoneySpent": 1500
+        },
+        {
+            "entryCategory": "Gaming",
+            "entryName": "Nintendo",
+            "entryMoneySpent": 400
+        }
+    ],
+    "budgetBookName": "Angelique's Budget Book",
+    "invoice": "INVOICE\n_____________\nName: IPHONE\nCategory: ESSENTIALS\nMoney Spent: $1500.0\n--------------\nName: NINTENDO\nCategory: GAMING\nMoney Spent: $400.0\n--------------",
+    "budgetBookTotal": 1900,
+    "numberOfItemsBought": 2
+}

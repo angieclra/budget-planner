@@ -1,12 +1,18 @@
 package model;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+import persistence.Writable;
+
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Locale;
 
 // Represents a budget book with the user's entries in it
-public class BudgetBookEntries {
+public class BudgetBookEntries implements Writable {
     // array list consisting of entries of spending
     private ArrayList<Entry> entries;
     // changing properties of a budget book, name of budget book assigned to field entriesName,
@@ -40,6 +46,11 @@ public class BudgetBookEntries {
         }
     }
 
+    // EFFECTS: returns an unmodifiable set of budget book entries
+    public List<Entry> getEntries() {
+        return Collections.unmodifiableList(entries);
+    }
+
     // EFFECTS: return the total number of entries in the user's budget book
     public int getNumEntries() {
         return entries.size();
@@ -70,5 +81,28 @@ public class BudgetBookEntries {
                     + entries.get(i).getEntryMoneySpent() + "\n--------------";
         }
         return content;
+    }
+
+    // EFFECTS: return JSON as a JSONObject
+    @Override
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("budgetBookName", entriesName);
+        json.put("budgetBookTotal", totalMoney);
+        json.put("invoice", printInvoice());
+        json.put("numberOfItemsBought", getNumEntries());
+        json.put("spending", getEntries());
+        return json;
+    }
+
+    // EFFECTS: returns entries in this budget book as a JSON array
+    private JSONArray entriesToJson() {
+        JSONArray jsonArray = new JSONArray();
+
+        for (Entry e : entries) {
+            jsonArray.put(e.toJson());
+        }
+
+        return jsonArray;
     }
 }

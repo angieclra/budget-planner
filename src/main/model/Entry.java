@@ -1,7 +1,10 @@
 package model;
 
+import org.json.JSONObject;
+import persistence.Writable;
+
 // Represents a single entry with a name, category, and amount of money spent
-public class Entry {
+public class Entry implements Writable {
     // name of the spending
     private String entryName;
     // category of the spending
@@ -42,7 +45,13 @@ public class Entry {
         return entryMoney;
     }
 
-
-
-
+    // EFFECTS: put entry, along with the name, category, and money spent into JSONObject
+    @Override
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("name", entryName);
+        json.put("category", entryCategory);
+        json.put("moneySpent", entryMoney);
+        return json;
+    }
 }
