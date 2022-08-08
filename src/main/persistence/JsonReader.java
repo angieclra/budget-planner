@@ -61,10 +61,10 @@ public class JsonReader {
     // MODIFIES: budgetBookEntries
     // EFFECTS: parses item from JSON object and adds it to budget book
     private void addEntry(BudgetBookEntries budgetBookEntries, JSONObject jsonObject) {
-        String name = jsonObject.getString("entryName");
-        String category = jsonObject.getString("entryCategory");
-        Double money = jsonObject.getDouble("entryMoneySpent");
-        Entry entry = new Entry(name, category, money);
+        String entryName = jsonObject.getString("entryName");
+        String entryCategory = jsonObject.getString("entryCategory");
+        Double entryMoneySpent = jsonObject.getDouble("entryMoneySpent");
+        Entry entry = new Entry(entryName, entryCategory, entryMoneySpent);
         budgetBookEntries.addToBudgetEntries(entry);
     }
 }

@@ -1,23 +1,11 @@
 {
-    "spending": [
-        {
-            "moneySpent": 1500,
-            "name": "Iphone",
-            "category": "Essentials"
-        },
-        {
-            "moneySpent": 400,
-            "name": "Nintendo",
-            "category": "Gaming"
-        },
-        {
-            "moneySpent": 15,
-            "name": "Noodles",
-            "category": "Food"
-        }
-    ],
-    "budgetBookName": "Angelique's Budget Book",
-    "invoice": "INVOICE\n_____________\nName: IPHONE\nCategory: ESSENTIALS\nMoney Spent: $1500.0\n--------------\nName: NINTENDO\nCategory: GAMING\nMoney Spent: $400.0\n--------------\nName: NOODLES\nCategory: FOOD\nMoney Spent: $15.0\n--------------",
-    "budgetBookTotal": 1915,
-    "numberOfItemsBought": 3
+    "spending": [{
+        "entryCategory": "eir",
+        "entryName": "hlo",
+        "entryMoneySpent": 100
+    }],
+    "budgetBookName": "Angelique's Shopping Cart ♡",
+    "invoice": "INVOICE\n_____________\nName: HLO\nCategory: EIR\nMoney Spent: $100.0\n--------------",
+    "budgetBookTotal": 100,
+    "numberOfItemsBought": 1
 }

@@ -49,9 +49,9 @@ public class Entry implements Writable {
     @Override
     public JSONObject toJson() {
         JSONObject json = new JSONObject();
-        json.put("name", entryName);
-        json.put("category", entryCategory);
-        json.put("moneySpent", entryMoney);
+        json.put("entryName", entryName);
+        json.put("entryCategory", entryCategory);
+        json.put("entryMoneySpent", entryMoney);
         return json;
     }
 }

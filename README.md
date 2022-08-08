@@ -20,3 +20,14 @@ being organized, and I do think many people should be encouraged to use a budget
 - As a user, I want to be able to see invoice for the spending in the budget book
 - As a user, I want to be able to save my budget book's spending to file
 - As a user, I want to be able to load my budget book's spending from file
+- 
+# Instructions for Grader
+
+- You can generate the first required event (adding entry to the list) by inputting the name of the spending, 
+along with the category and money spent. Click the "Add Spending" button, and it will add the entry to the list.
+- You can generate the second required event (remove entry from the budget book list) by entering the name of the item 
+that the user wants to remove, and remove if the entry is found in the budget book list.
+- You can see the panel that displays the Xs that have been added to the Y by clicking "View Budget Book Spending".
+- You can locate my visual component by clicking the button "Finish Budgeting".
+- You can save the state of my application by clicking the button "Save Budget Book".
+- You can reload the state of my application by clicking the button "Load Budget Book".

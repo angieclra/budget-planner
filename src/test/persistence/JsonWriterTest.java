@@ -27,12 +27,12 @@ public class JsonWriterTest extends JsonTest {
     void testWriterEmptyBudgetBook() {
         try {
             BudgetBookEntries budgetBookEntries = new BudgetBookEntries("Angelique's Budget Book");
-            JsonWriter writer = new JsonWriter("./data/testWriterEmptyShoppingCart.json");
+            JsonWriter writer = new JsonWriter("./data/testWriterEmptyBudgetBook.json");
             writer.open();
             writer.write(budgetBookEntries);
             writer.close();
 
-            JsonReader reader = new JsonReader("./data/testWriterEmptyShoppingCart.json");
+            JsonReader reader = new JsonReader("./data/testWriterEmptyBudgetBook.json");
             budgetBookEntries = reader.read();
             assertEquals("Angelique's Budget Book", budgetBookEntries.getBudgetEntriesName());
             assertEquals(0, budgetBookEntries.getNumEntries());
@@ -48,12 +48,12 @@ public class JsonWriterTest extends JsonTest {
             BudgetBookEntries budgetBookEntries = new BudgetBookEntries("Angelique's Budget Book");
             budgetBookEntries.addToBudgetEntries(new Entry("iphone", "fun", 1000.0));
             budgetBookEntries.addToBudgetEntries(new Entry("nintendo switch", "gaming", 400.0));
-            JsonWriter writer = new JsonWriter("./data/testWriterGeneralShoppingCart.json");
+            JsonWriter writer = new JsonWriter("./data/testWriterGeneralBudgetBook.json");
             writer.open();
             writer.write(budgetBookEntries);
             writer.close();
 
-            JsonReader reader = new JsonReader("./data/testWriterGeneralShoppingCart.json");
+            JsonReader reader = new JsonReader("./data/testWriterGeneralBudgetBook.json");
             budgetBookEntries = reader.read();
             assertEquals("Angelique's Budget Book", budgetBookEntries.getBudgetEntriesName());
             List<Entry> entries = budgetBookEntries.getEntries();
