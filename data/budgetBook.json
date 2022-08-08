@@ -1,11 +1,23 @@
 {
-    "spending": [{
-        "entryCategory": "eir",
-        "entryName": "hlo",
-        "entryMoneySpent": 100
-    }],
-    "budgetBookName": "Angelique's Shopping Cart ♡",
-    "invoice": "INVOICE\n_____________\nName: HLO\nCategory: EIR\nMoney Spent: $100.0\n--------------",
-    "budgetBookTotal": 100,
-    "numberOfItemsBought": 1
+    "spending": [
+        {
+            "entryCategory": "Gaming",
+            "entryName": "Nintendo",
+            "entryMoneySpent": 400
+        },
+        {
+            "entryCategory": "Food",
+            "entryName": "Noodles",
+            "entryMoneySpent": 20
+        },
+        {
+            "entryCategory": "Housing",
+            "entryName": "Rent",
+            "entryMoneySpent": 1000
+        }
+    ],
+    "budgetBookName": "Angelique's Budget Book ♡",
+    "invoice": "INVOICE\n_____________\n1. Name: NINTENDO\nCategory: GAMING\nMoney Spent: $400.0\n--------------\n2. Name: NOODLES\nCategory: FOOD\nMoney Spent: $20.0\n--------------\n3. Name: RENT\nCategory: HOUSING\nMoney Spent: $1000.0\n--------------",
+    "budgetBookTotal": 1420,
+    "numberOfItemsBought": 3
 }
