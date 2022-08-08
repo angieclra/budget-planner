@@ -76,8 +76,8 @@ public class BudgetBookEntries implements Writable {
 
         content = "INVOICE\n" + "_____________";
         for (int i = 0; i < getNumEntries(); i++) {
-            content += "\nName: " + entries.get(i).getEntryName().toUpperCase(Locale.ROOT) + "\nCategory: "
-                    + entries.get(i).getEntryCategory().toUpperCase(Locale.ROOT) + "\nMoney Spent: $"
+            content += "\n" + (i + 1) + "." + " Name: " + entries.get(i).getEntryName().toUpperCase(Locale.ROOT)
+                    + "\nCategory: " + entries.get(i).getEntryCategory().toUpperCase(Locale.ROOT) + "\nMoney Spent: $"
                     + entries.get(i).getEntryMoneySpent() + "\n--------------";
         }
         return content;

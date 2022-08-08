@@ -20,7 +20,7 @@ being organized, and I do think many people should be encouraged to use a budget
 - As a user, I want to be able to see invoice for the spending in the budget book
 - As a user, I want to be able to save my budget book's spending to file
 - As a user, I want to be able to load my budget book's spending from file
-
+ 
 # Instructions for Grader
 
 - You can generate the first required event (adding entry to the list) by inputting the name of the spending, 
