@@ -78,7 +78,7 @@ public class BudgetBookEntries implements Writable {
     public String printSummaryBudgetBook() {
         String content;
 
-        content = "SUMMARY\n" + "_____________";
+        content = "SUMMARY\n" + "___________________________________";
         for (int i = 0; i < getNumEntries(); i++) {
             content += "\n" + (i + 1) + "." + " Name: " + entries.get(i).getEntryName().toUpperCase(Locale.ROOT)
                     + "\nCategory: " + entries.get(i).getEntryCategory().toUpperCase(Locale.ROOT) + "\nMoney Spent: $"

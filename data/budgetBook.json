@@ -6,18 +6,13 @@
             "entryMoneySpent": 400
         },
         {
-            "entryCategory": "Food",
-            "entryName": "Noodles",
-            "entryMoneySpent": 20
-        },
-        {
             "entryCategory": "Housing",
             "entryName": "Rent",
             "entryMoneySpent": 1000
         }
     ],
     "budgetBookName": "Angelique's Budget Book ♡",
-    "invoice": "INVOICE\n_____________\n1. Name: NINTENDO\nCategory: GAMING\nMoney Spent: $400.0\n--------------\n2. Name: NOODLES\nCategory: FOOD\nMoney Spent: $20.0\n--------------\n3. Name: RENT\nCategory: HOUSING\nMoney Spent: $1000.0\n--------------",
-    "budgetBookTotal": 1420,
-    "numberOfItemsBought": 3
+    "invoice": "SUMMARY\n___________________________________\n1. Name: NINTENDO\nCategory: GAMING\nMoney Spent: $400.0\n--------------\n2. Name: RENT\nCategory: HOUSING\nMoney Spent: $1000.0\n--------------",
+    "budgetBookTotal": 1400,
+    "numberOfItemsBought": 2
 }

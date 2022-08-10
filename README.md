@@ -44,3 +44,9 @@ Entry removed from budget book
 
 Wed Aug 10 09:50:00 PDT 2022
 Budget book summary printed
+
+## Phase 4: Task 3
+- If I have more time to work on my project, I would refactor the big class ``BudgetBookFrame`` since breaking it 
+into smaller classes will make the classes more testable and hence it will be easier to understand, debug if the program
+comes into a bug, and it will implement the Single Responsibility Principle, where each class has its own 
+functionality.
