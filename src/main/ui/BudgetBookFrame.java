@@ -2,6 +2,8 @@ package ui;
 
 import model.Entry;
 import model.BudgetBookEntries;
+import model.Event;
+import model.EventLog;
 import persistence.JsonReader;
 import persistence.JsonWriter;
 
@@ -20,6 +22,9 @@ public class BudgetBookFrame extends JFrame {
     private int numberItems;
 
     private BudgetBookEntries budgetBookEntries;
+
+    private EventLog eventLog;
+
     private static JFrame frame;
 
     private JTextField totalSpending;
@@ -356,7 +361,7 @@ public class BudgetBookFrame extends JFrame {
         viewInvoiceButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String invoiceItems = "\t" + budgetBookEntries.printInvoice();
+                String invoiceItems = "\t" + budgetBookEntries.printSummaryBudgetBook();
                 invoiceItems += "\n Total Items Spent: " + totalItems.getText()
                         + "\n Total Spending: " + totalSpending.getText() + "\n"
                         + "\n Bye for now! See ya soon :)";
@@ -478,6 +483,12 @@ public class BudgetBookFrame extends JFrame {
     // EFFECTS: prints event that is logged in the event log, including adding items,
     // removing items, and printing invoice
     private void quit() {
+        eventLog = EventLog.getInstance();
+
+        for (Event event : eventLog) {
+            System.out.println(event + "\n");
+        }
+
         System.exit(0);
     }
 

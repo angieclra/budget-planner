@@ -105,7 +105,7 @@ public class BudgetBookEntriesTest {
         testBudgetBook.addToBudgetEntries(new Entry("rent", "housing", 1200));
         assertEquals("INVOICE\n_____________\nName: RENT\n" + "Category: HOUSING\n" +
                         "Money Spent: $1200.0\n--------------",
-                testBudgetBook.printInvoice());
+                testBudgetBook.printSummaryBudgetBook());
     }
 
 }

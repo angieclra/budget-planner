@@ -153,7 +153,7 @@ public class BudgetApp {
     // EFFECTS: prints the invoice for the user along with the name, the category, and money spent of the spending,
     // and the total money spent in the budget book
     private void doPrintInvoice() {
-        System.out.println("\n" + entries.printInvoice() + "\nTotal: $" + entries.getMoneySpentTotal());
+        System.out.println("\n" + entries.printSummaryBudgetBook() + "\nTotal: $" + entries.getMoneySpentTotal());
     }
 
     // EFFECTS: saves current budget book to file

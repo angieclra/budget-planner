@@ -19,11 +19,13 @@ public class BudgetBookEntries implements Writable {
     // total money spent by user is assigned to field totalMoney
     private String entriesName;
     private double totalMoney;
+    private EventLog eventLog;
 
     // EFFECTS: constructs budget book
     public BudgetBookEntries(String entriesName) {
         this.entriesName = entriesName;
         entries = new ArrayList<>();
+        eventLog = EventLog.getInstance();
     }
 
     // MODIFIES: this
@@ -31,6 +33,7 @@ public class BudgetBookEntries implements Writable {
     public void addToBudgetEntries(Entry entry) {
         entries.add(entry);
         totalMoney += entry.getEntryMoneySpent();
+        addEntryEvent();
     }
 
     // MODIFIES: this
@@ -41,6 +44,7 @@ public class BudgetBookEntries implements Writable {
             if (entry.getEntryName().equals(name)) {
                 entries.remove(entry);
                 totalMoney =  getMoneySpentTotal() - entry.getEntryMoneySpent();
+                removeEntryEvent();
                 return;
             }
         }
@@ -69,17 +73,18 @@ public class BudgetBookEntries implements Writable {
     }
 
     // MODIFIES: this
-    // EFFECTS: prints the invoice for the user along with the name of spending, alongside with the
+    // EFFECTS: prints the summary of spending for the user along with the name of spending, alongside with the
     // category and money spent, and total of the whole budget book made by the user
-    public String printInvoice() {
+    public String printSummaryBudgetBook() {
         String content;
 
-        content = "INVOICE\n" + "_____________";
+        content = "SUMMARY\n" + "_____________";
         for (int i = 0; i < getNumEntries(); i++) {
             content += "\n" + (i + 1) + "." + " Name: " + entries.get(i).getEntryName().toUpperCase(Locale.ROOT)
                     + "\nCategory: " + entries.get(i).getEntryCategory().toUpperCase(Locale.ROOT) + "\nMoney Spent: $"
                     + entries.get(i).getEntryMoneySpent() + "\n--------------";
         }
+        printSummaryEvent();
         return content;
     }
 
@@ -89,7 +94,7 @@ public class BudgetBookEntries implements Writable {
         JSONObject json = new JSONObject();
         json.put("budgetBookName", entriesName);
         json.put("budgetBookTotal", totalMoney);
-        json.put("invoice", printInvoice());
+        json.put("invoice", printSummaryBudgetBook());
         json.put("numberOfItemsBought", getNumEntries());
         json.put("spending", entriesToJson());
         return json;
@@ -104,5 +109,20 @@ public class BudgetBookEntries implements Writable {
         }
 
         return jsonArray;
+    }
+
+    // EFFECTS: log event on add entry to budget book
+    private void addEntryEvent() {
+        eventLog.logEvent(new Event("Entry added to budget book"));
+    }
+
+    // EFFECTS: log event on removing entry from budget book
+    private void removeEntryEvent() {
+        eventLog.logEvent(new Event("Entry removed from budget book"));
+    }
+
+    // EFFECTS: log event on print invoice from budget book
+    private void printSummaryEvent() {
+        eventLog.logEvent(new Event("Budget book summary printed"));
     }
 }
